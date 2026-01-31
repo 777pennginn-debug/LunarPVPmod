@@ -1,7 +1,14 @@
-public class ClickGui extends GuiScreen {
-    @Override
-    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
-        drawRect(50, 50, 200, 200, 0x90000000);
-        super.drawScreen(mouseX, mouseY, partialTicks);
+package yourclient.hud;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class HudManager {
+
+    public static List<Object> huds = new ArrayList<>();
+
+    public static void init() {
+        huds.add(new FpsHud());
+        // 
     }
 }
