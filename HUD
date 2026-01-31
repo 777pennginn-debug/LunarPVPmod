@@ -1,0 +1,14 @@
+package yourclient.hud;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class HudManager {
+
+    public static List<Object> huds = new ArrayList<>();
+
+    public static void init() {
+        huds.add(new FpsHud());
+        // ここに他のHUDを追加していく
+    }
+}
