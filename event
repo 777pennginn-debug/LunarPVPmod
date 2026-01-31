@@ -1,0 +1,16 @@
+package yourclient.hud;
+
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
+
+public class HudRenderer {
+
+    @SubscribeEvent
+    public void onRender(RenderGameOverlayEvent.Text e) {
+        for (Object hud : HudManager.huds) {
+            if (hud instanceof FpsHud) {
+                ((FpsHud) hud).draw();
+            }
+        }
+    }
+}
