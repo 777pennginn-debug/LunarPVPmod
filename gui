@@ -1,0 +1,7 @@
+public class ClickGui extends GuiScreen {
+    @Override
+    public void drawScreen(int mouseX, int mouseY, float partialTicks) {
+        drawRect(50, 50, 200, 200, 0x90000000);
+        super.drawScreen(mouseX, mouseY, partialTicks);
+    }
+}
