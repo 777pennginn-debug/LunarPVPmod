@@ -1,0 +1,9 @@
+@Mod(modid = "yourclient", version = "1.0")
+public class Main {
+
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+        HudManager.init();
+        MinecraftForge.EVENT_BUS.register(new HudRenderer());
+    }
+}
