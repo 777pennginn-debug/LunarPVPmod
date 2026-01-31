@@ -1,0 +1,13 @@
+public class ModuleManager {
+    public static List<Module> modules = new ArrayList<>();
+
+    public static void register(Module m) {
+        modules.add(m);
+    }
+
+    public static void update() {
+        for (Module m : modules) {
+            if (m.isEnabled()) m.onUpdate();
+        }
+    }
+}
