@@ -1,5 +1,13 @@
-@SubscribeEvent
-public void onRender(RenderGameOverlayEvent.Text e) {
-    Minecraft mc = Minecraft.getMinecraft();
-    mc.fontRendererObj.drawString("FPS: " + Minecraft.getDebugFPS(), 5, 5, 0xFFFFFF);
+package yourclient.hud;
+
+import net.minecraft.client.Minecraft;
+
+public class FpsHud {
+
+    private Minecraft mc = Minecraft.getMinecraft();
+
+    public void draw() {
+        String text = "FPS: " + Minecraft.getDebugFPS();
+        mc.fontRendererObj.drawString(text, 5, 5, 0xFFFFFF);
+    }
 }
