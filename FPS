@@ -1,0 +1,5 @@
+@SubscribeEvent
+public void onRender(RenderGameOverlayEvent.Text e) {
+    Minecraft mc = Minecraft.getMinecraft();
+    mc.fontRendererObj.drawString("FPS: " + Minecraft.getDebugFPS(), 5, 5, 0xFFFFFF);
+}
