@@ -1,0 +1,17 @@
+package yourclient.hud;
+
+import net.minecraft.client.Minecraft;
+
+public class CoordinatesHud {
+
+    private Minecraft mc = Minecraft.getMinecraft();
+
+    public void draw() {
+        int x = (int) mc.thePlayer.posX;
+        int y = (int) mc.thePlayer.posY;
+        int z = (int) mc.thePlayer.posZ;
+
+        String text = "XYZ: " + x + " / " + y + " / " + z;
+        mc.fontRendererObj.drawString(text, 5, 20, 0xFFFFFF);
+    }
+}
