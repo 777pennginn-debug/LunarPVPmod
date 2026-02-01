@@ -1,0 +1,22 @@
+public class KeystrokesModule extends HudModule {
+
+    public KeystrokesModule() {
+        super("Keystrokes", Keyboard.KEY_NONE);
+    }
+
+    @Override
+    public void render() {
+        Minecraft mc = Minecraft.getMinecraft();
+        FontRenderer fr = mc.fontRendererObj;
+
+        fr.drawString("W", 20, 40, mc.gameSettings.keyBindForward.isKeyDown() ? 0x00FF00 : 0xFFFFFF);
+        fr.drawString("A", 5, 55, mc.gameSettings.keyBindLeft.isKeyDown() ? 0x00FF00 : 0xFFFFFF);
+        fr.drawString("S", 20, 55, mc.gameSettings.keyBindBack.isKeyDown() ? 0x00FF00 : 0xFFFFFF);
+        fr.drawString("D", 35, 55, mc.gameSettings.keyBindRight.isKeyDown() ? 0x00FF00 : 0xFFFFFF);
+    }
+
+    @Override
+    public void onEnable() {}
+    @Override
+    public void onDisable() {}
+}
