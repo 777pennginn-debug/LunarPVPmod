@@ -1,0 +1,13 @@
+public class CpsUtil {
+    private static final List<Long> clicks = new ArrayList<>();
+
+    public static void registerClick() {
+        clicks.add(System.currentTimeMillis());
+    }
+
+    public static int getCPS() {
+        long time = System.currentTimeMillis();
+        clicks.removeIf(c -> c + 1000 < time);
+        return clicks.size();
+    }
+}
