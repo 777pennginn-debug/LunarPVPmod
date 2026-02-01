@@ -1,13 +1,17 @@
-package yourclient.hud;
+public class FpsModule extends HudModule {
 
-import net.minecraft.client.Minecraft;
-
-public class FpsHud {
-
-    private Minecraft mc = Minecraft.getMinecraft();
-
-    public void draw() {
-        String text = "FPS: " + Minecraft.getDebugFPS();
-        mc.fontRendererObj.drawString(text, 5, 5, 0xFFFFFF);
+    public FpsModule() {
+        super("FPS", Keyboard.KEY_NONE);
     }
+
+    @Override
+    public void render() {
+        Minecraft mc = Minecraft.getMinecraft();
+        mc.fontRendererObj.drawString("FPS: " + Minecraft.getDebugFPS(), 5, 5, 0xFFFFFF);
+    }
+
+    @Override
+    public void onEnable() {}
+    @Override
+    public void onDisable() {}
 }
