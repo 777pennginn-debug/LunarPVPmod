@@ -1,0 +1,15 @@
+public class ModuleManager {
+    public static List<Module> modules = new ArrayList<>();
+
+    public static void init() {
+        modules.add(new FpsModule());
+        modules.add(new CpsModule());
+        modules.add(new KeystrokesModule());
+        modules.add(new ToggleSprintModule());
+        // ここにどんどん追加
+    }
+
+    public static List<Module> getModules() {
+        return modules;
+    }
+}
