@@ -1,0 +1,19 @@
+public abstract class Module {
+    private String name;
+    private int key;
+    private boolean toggled;
+
+    public Module(String name, int key) {
+        this.name = name;
+        this.key = key;
+    }
+
+    public void toggle() {
+        toggled = !toggled;
+        if (toggled) onEnable();
+        else onDisable();
+    }
+
+    public abstract void onEnable();
+    public abstract void onDisable();
+}
