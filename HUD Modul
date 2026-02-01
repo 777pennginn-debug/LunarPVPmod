@@ -1,0 +1,8 @@
+public abstract class HudModule extends Module {
+
+    public HudModule(String name, int key) {
+        super(name, key);
+    }
+
+    public abstract void render();
+}
